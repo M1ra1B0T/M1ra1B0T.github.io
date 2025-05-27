@@ -27,7 +27,7 @@ function getData(url) {
 }
 
 async function getRealData() {
-  const AdminUrl = "http://127.0.0.1:1337/login";
+  const AdminUrl = "http://127.0.0.1:1337/";
   const testurl = "https://m1ra1b0t.github.io/";
   const response =  await fetch(AdminUrl, {credentials: 'include',});
   const adminHtml = await response.text();
